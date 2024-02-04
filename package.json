@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "learning prisma",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon script.ts"
+    "start": "nodemon api_usage_2.js",
+    "usage4": "node api_usage_4.js"
   },
   "author": "tanmay",
   "license": "ISC",
@@ -17,6 +19,8 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@prisma/client": "^5.9.1"
+    "@prisma/client": "^5.9.1",
+    "dotenv": "^16.4.1",
+    "openai": "^4.26.0"
   }
 }
