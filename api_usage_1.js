@@ -1,10 +1,11 @@
-import { Configuration, OpenAIApi } from "openai";
+import OpenAI from "openai";
+import dotenv from "dotenv";
 
 const config = new Configuration({
 	apiKey: env("OPENAI_API_KEY"),
 });
 
-const openai = new OpenAIApi(config);
+const openai = new OpenAI(config);
 
 const runPrompt = async () => {
 	const prompt = `
