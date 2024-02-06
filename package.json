@@ -8,7 +8,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon api_usage_2.js",
     "usage4": "node api_usage_4.js",
-    "usage2": "node api_usage_2.js"
+    "usage6": "node api_usage_6.js",
+    "usage7": "node api_usage_7.js"
+
+
+    
   },
   "author": "tanmay",
   "license": "ISC",
