@@ -9,7 +9,10 @@
     "start": "nodemon api_usage_2.js",
     "usage4": "node api_usage_4.js",
     "usage6": "node api_usage_6.js",
-    "usage7": "node api_usage_7.js"
+    "usage7": "node api_usage_7.js",
+    "usage8": "node api_usage_8.js",
+    "usage9": "node api_usage_9.js",
+    "usage10": "node api_usage_10.js"
 
 
     
