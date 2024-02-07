@@ -12,8 +12,17 @@
     "usage7": "node api_usage_7.js",
     "usage8": "node api_usage_8.js",
     "usage9": "node api_usage_9.js",
-    "usage10": "node api_usage_10.js"
-
+    "usage10": "node api_usage_10.js",
+    "fun1": "node function_calling/func_1.js",
+    "fun2": "node function_calling/func_2.js",
+    "fun3": "node function_calling/func_3.js",
+    "fun4": "node function_calling/func_4.js",
+    "fun5": "node function_calling/func_5.js",
+    "fun6": "node function_calling/func_6.js",
+    "fun7": "node function_calling/func_7.js",
+    "fun8": "node function_calling/func_8.js",
+    "fun9": "node function_calling/func_9.js",
+    "fun10": "node function_calling/func_10.js"
 
     
   },

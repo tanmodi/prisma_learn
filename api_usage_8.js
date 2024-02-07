@@ -192,12 +192,7 @@ const tool = [
       type: "object",
       properties: {
         pet: {
-          type: "object",
-          properties: {
-            pet_name: {
-                
-            }
-          }
+          type: "string",
           description: "the name of the pet",
         },
         pet_owner: {
@@ -229,3 +224,5 @@ const result = JSON.parse(response.choices[0].message.function_call.arguments);
 console.log(response);
 // Return the name and age as a JSON object
 console.log(result);
+
+console.log(response.choices[0].message);
