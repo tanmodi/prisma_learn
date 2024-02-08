@@ -22,9 +22,17 @@
     "fun7": "node function_calling/func_7.js",
     "fun8": "node function_calling/func_8.js",
     "fun9": "node function_calling/func_9.js",
-    "fun10": "node function_calling/func_10.js"
-
-    
+    "fun10": "node function_calling/func_10.js",
+    "pinecone1": "node pinecone/pinecone_DB_1.js",
+    "pinecone2": "node pinecone/pinecone_DB_2.js",
+    "pinecone3": "node pinecone/pinecone_DB_3.js",
+    "pinecone4": "node pinecone/pinecone_DB_4.js",
+    "pinecone5": "node pinecone/pinecone_DB_5.js",
+    "emb1": "node embedding/embedding_api_1.js",
+    "emb2": "node embedding/embedding_api_2.js",
+    "emb3": "node embedding/embedding_api_3.js",
+    "emb4": "node embedding/embedding_api_4.js",
+    "emb5": "node embedding/embedding_api_5.js"
   },
   "author": "tanmay",
   "license": "ISC",
@@ -36,6 +44,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@pinecone-database/pinecone": "^2.0.1",
     "@prisma/client": "^5.9.1",
     "dotenv": "^16.4.1",
     "openai": "^4.26.0"
