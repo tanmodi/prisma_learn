@@ -1,45 +1,36 @@
-import { Pinecone } from '@pinecone-database/pinecone';
+import { Pinecone } from "@pinecone-database/pinecone";
 import dotenv from "dotenv";
-
+import OpenAI from "openai";
 dotenv.config();
 
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+const data = `This is test`;
+const em = [];
+async function main() {
+  const embedding = await openai.embeddings.create({
+    model: "text-embedding-3-small",
+    input: data,
+    encoding_format: "float",
+  });
+  const result = embedding;
+  console.log(em);
+  const embed = result.data[0].embedding;
+  //   console.log(embed);
+  return embed;
+}
+const r = await main();
+// console.log(r);
 const pinecone = new Pinecone({
   apiKey: process.env.PINECONE_API_KEY,
+  controllerHostUrl: process.env.PINECONE_HOST_URL,
 });
-// const pinecone = new Pinecone();
 
-type MovieMetadata = {
-  title: string,
-  runtime: numbers,
-  genre: 'comedy' | 'horror' | 'drama' | 'action'
-}
-
-// Specify a custom metadata type while targeting the index
-const index = pinecone.index<MovieMetadata>('test-index');
-
-// Now you get type errors if upserting malformed metadata
-await index.upsert([{
-  id: '1234',
-  values: [
-    1, 2, 3
-  ],
-  metadata: {
-    genre: 'Gone with the Wind',
-    runtime: 238,
-    genre: 'drama',
-    category: 'classic'
-  }
-}])
-
-const results = await index.query({
-   vector: [
-    .1
-   ],
-   filter: { genre: { '$eq': 'drama' }}
-})
-const movie = results.matches[0];
-
-if (movie.metadata) {
-  const { title, runtime, genre } = movie.metadata;
-  console.log(`The best match in drama was ${title}`)
-}
+const index = pinecone.Index(process.env.PINECONE_INDEX);
+const value = Array.from(r);
+console.log("value");
+console.log(typeof(value));
+const final = Object.values(r);
+console.log(typeof(final));
+index.upsert(value);

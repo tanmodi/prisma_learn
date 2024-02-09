@@ -7,7 +7,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon api_usage_2.js",
+    "usage1": "node api_usage_1.js",
+    "usage2": "node api_usage_2.js",
+    "usage3": "node api_usage_3.js",
     "usage4": "node api_usage_4.js",
+    "usage5": "node api_usage_5.js",
     "usage6": "node api_usage_6.js",
     "usage7": "node api_usage_7.js",
     "usage8": "node api_usage_8.js",

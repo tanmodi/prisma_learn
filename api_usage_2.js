@@ -12,10 +12,10 @@ const openai = new OpenAI({
 async function main() {
   const chatCompletion = await openai.chat.completions.create({
     messages: [{ role: 'user', content: 'only give in one word with am/pm time in india when time in japan is 9pm' }],
-    model: 'gpt-3.5',
+    model: 'gpt-3.5-turbo',
     max_tokens: 10,
   });
-  console.log("ID : ", chatCompletion.id)
+  console.log("ID : ", chatCompletion)
   console.log("Prompt token used : ", chatCompletion.usage.prompt_tokens)
   console.log("Completion token used : ", chatCompletion.usage.completion_tokens)
   console.log("Total token used : ", chatCompletion.usage.total_tokens)
