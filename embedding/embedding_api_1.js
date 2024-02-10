@@ -13,7 +13,11 @@ async function main() {
     input: "Your text string goes here",
     encoding_format: "float",
   });
-  console.log(embedding);
-  console.log(embedding.data[0].embedding);
+  let result = embedding;
+  console.log(result);
+  console.log(typeof(result.data[0].embedding));
+  console.log(typeof(result.data[0]));
+  console.log(typeof(result.data));
+//   console.log(result.data);
 }
 main();
