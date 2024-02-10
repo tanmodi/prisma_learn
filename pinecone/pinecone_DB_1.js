@@ -60,7 +60,7 @@ async function main() {
   return embed;
 }
 const r = await main();
-// console.log(r);
+console.log(r);
 const pinecone = new Pinecone({
   apiKey: process.env.PINECONE_API_KEY,
   controllerHostUrl: process.env.PINECONE_HOST_URL,
@@ -69,7 +69,21 @@ const pinecone = new Pinecone({
 const index = pinecone.Index(process.env.PINECONE_INDEX);
 const value = Array.from(r);
 console.log("value");
+
 console.log(typeof(value));
 const final = Object.values(value);
 console.log(typeof(final));
-// index.upsert(value);
+console.log("this is final");
+console.log(final);
+index.upsert([
+  {
+    id: "1",
+    values: r.embedding,
+    metadata: {
+      name: "Tanmay",
+      email: "tanmaymodi64@gmail.com",
+      linkedin: "https://www.linkedin.com/in/tanmodi",
+      github: "https://github.com/tanmodi",
+    }
+  }
+]);
