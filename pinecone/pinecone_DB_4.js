@@ -18,6 +18,7 @@ index.upsert([
     values: array,
     metadata: {
       name: "Tanmay",
+      mobile_no : "9205875182",
       email: "tanmaymodi64@gmail.com",
       linkedin: "https://www.linkedin.com/in/tanmodi",
       github: "https://github.com/tanmodi",
